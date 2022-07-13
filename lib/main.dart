@@ -87,7 +87,7 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
           onTap: () {
             if (Num1 == _correctNumber) {
               var snackbar =  const SnackBar(
-                backgroundColor: Colors.indigoAccent,
+                backgroundColor: Colors.green,
                 duration: Duration(seconds: 1),
                 content: Text(
                   'Correct !',
@@ -97,7 +97,7 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
               ScaffoldMessenger.of(context).showSnackBar(snackbar);
             } else {
               var snackbar = const SnackBar(
-                backgroundColor: Colors.indigoAccent,
+                backgroundColor: Colors.red,
                 duration: Duration(seconds: 1),
                 content: Text(
                   'False !',
@@ -117,7 +117,7 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
           onTap: () {
             if (Num2 == _correctNumber) {
               var snackbar = const SnackBar(
-                backgroundColor: Colors.indigoAccent,
+                backgroundColor: Colors.green,
                 duration: Duration(seconds: 1),
                 content: Text(
                   'Correct !',
@@ -127,7 +127,7 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
               ScaffoldMessenger.of(context).showSnackBar(snackbar);
             } else {
               var snackbar = const SnackBar(
-                backgroundColor: Colors.indigoAccent,
+                backgroundColor: Colors.red,
                 duration: Duration(seconds: 1),
                 content: Text(
                   'False !',
@@ -147,7 +147,7 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
           onTap: () {
             if (Num3 == _correctNumber) {
               var snackbar = const SnackBar(
-                backgroundColor: Colors.indigoAccent,
+                backgroundColor: Colors.green,
                 duration: Duration(seconds: 1),
                 content: Text(
                   'Correct !',
@@ -157,7 +157,7 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
               ScaffoldMessenger.of(context).showSnackBar(snackbar);
             } else {
               var snackbar = const SnackBar(
-                backgroundColor: Colors.indigoAccent,
+                backgroundColor: Colors.red,
                 duration: Duration(seconds: 1),
                 content: Text(
                   'False !',
