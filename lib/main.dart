@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 void main() => runApp(const MyApp());
 
@@ -48,19 +49,19 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
 
   void _refresh() {
     _numbers.shuffle();
-    correctNumbers.remove(Num1);
-    correctNumbers.remove(Num2);
-    correctNumbers.remove(Num3);
+    correctNumbers = [];
     Num1 = _numbers[0];
     Num2 = _numbers[5];
     Num3 = _numbers[8];
     correctNumbers.add(Num1);
     correctNumbers.add(Num2);
     correctNumbers.add(Num3);
+    correctNumbers.shuffle();
+    _correctNumber = correctNumbers[0];
   }
 
-  void _correct_shuffle() {
-    correctNumbers.shuffle();
+  void initState() {
+    _refresh();
   }
 
   @override
@@ -73,10 +74,14 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
             padding: const EdgeInsets.all(15),
             child: Text(
               "Select the number $_correctNumber",
-              style: const TextStyle(
-                  fontWeight: FontWeight.bold,
-                  fontSize: 20,
-                  color: Colors.indigoAccent),
+              style: GoogleFonts.fredokaOne(
+                textStyle: const TextStyle(
+                    letterSpacing: 1.5,
+                    wordSpacing: 10,
+                    fontWeight: FontWeight.bold,
+                    fontSize: 20,
+                    color: Colors.indigoAccent),
+              ),
             ),
           ),
         ),
@@ -86,7 +91,7 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
         InkWell(
           onTap: () {
             if (Num1 == _correctNumber) {
-              var snackbar =  const SnackBar(
+              var snackbar = const SnackBar(
                 backgroundColor: Colors.green,
                 duration: Duration(seconds: 1),
                 content: Text(
@@ -180,8 +185,6 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
             onPressed: () {
               setState(() {
                 _refresh();
-                _correct_shuffle();
-                _correctNumber = correctNumbers[0];
               });
             },
             style: ElevatedButton.styleFrom(primary: Colors.indigo),
