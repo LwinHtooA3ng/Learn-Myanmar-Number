@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'img_inkwell.dart';
 
 void main() => runApp(const MyApp());
 
@@ -87,98 +88,12 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
           ),
         ),
         const SizedBox(
-          height: 10,
+          height: 20,
         ),
-        InkWell(
-          onTap: () {
-            if (Num1 == _correctNumber) {
-              var snackbar = const SnackBar(
-                backgroundColor: Colors.green,
-                duration: Duration(seconds: 1),
-                content: Text(
-                  'Correct !',
-                  style: TextStyle(fontWeight: FontWeight.bold),
-                ),
-              );
-              ScaffoldMessenger.of(context).showSnackBar(snackbar);
-            } else {
-              var snackbar = const SnackBar(
-                backgroundColor: Colors.red,
-                duration: Duration(seconds: 1),
-                content: Text(
-                  'False !',
-                  style: TextStyle(fontWeight: FontWeight.bold),
-                ),
-              );
-              ScaffoldMessenger.of(context).showSnackBar(snackbar);
-            }
-          },
-          child: Image(
-            image: AssetImage('images/$Num1.png'),
-            width: 80,
-            height: 80,
-          ),
-        ),
-        InkWell(
-          onTap: () {
-            if (Num2 == _correctNumber) {
-              var snackbar = const SnackBar(
-                backgroundColor: Colors.green,
-                duration: Duration(seconds: 1),
-                content: Text(
-                  'Correct !',
-                  style: TextStyle(fontWeight: FontWeight.bold),
-                ),
-              );
-              ScaffoldMessenger.of(context).showSnackBar(snackbar);
-            } else {
-              var snackbar = const SnackBar(
-                backgroundColor: Colors.red,
-                duration: Duration(seconds: 1),
-                content: Text(
-                  'False !',
-                  style: TextStyle(fontWeight: FontWeight.bold),
-                ),
-              );
-              ScaffoldMessenger.of(context).showSnackBar(snackbar);
-            }
-          },
-          child: Image(
-            image: AssetImage('images/$Num2.png'),
-            width: 80,
-            height: 80,
-          ),
-        ),
-        InkWell(
-          onTap: () {
-            if (Num3 == _correctNumber) {
-              var snackbar = const SnackBar(
-                backgroundColor: Colors.green,
-                duration: Duration(seconds: 1),
-                content: Text(
-                  'Correct !',
-                  style: TextStyle(fontWeight: FontWeight.bold),
-                ),
-              );
-              ScaffoldMessenger.of(context).showSnackBar(snackbar);
-            } else {
-              var snackbar = const SnackBar(
-                backgroundColor: Colors.red,
-                duration: Duration(seconds: 1),
-                content: Text(
-                  'False !',
-                  style: TextStyle(fontWeight: FontWeight.bold),
-                ),
-              );
-              ScaffoldMessenger.of(context).showSnackBar(snackbar);
-            }
-          },
-          child: Image(
-            image: AssetImage('images/$Num3.png'),
-            width: 80,
-            height: 80,
-          ),
-        ),
+        MyInkWell(Num: Num1, CN: _correctNumber),
+        MyInkWell(Num: Num2, CN: _correctNumber),
+        MyInkWell(Num: Num3, CN: _correctNumber),
+
         const SizedBox(
           height: 10,
         ),
