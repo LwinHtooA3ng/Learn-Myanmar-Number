@@ -1,6 +1,8 @@
 # myanmar_numbers
 
-A new Flutter project.
+This project made with flutter.
+
+![](https://github.com/LwinHtooA3ng/Learn-Myanmar-Number/blob/master/Learn_Myanmar_Number_AdobeExpress.gif)
 
 ## Getting Started
 
